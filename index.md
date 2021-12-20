@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14517,12 +14516,10 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Prediction of game outcomes in League of Legends
 by Yong Li, William Ju,</p>
-<p>Introduction</p>
-<p>League of Legends is a game that is played by over 180 million players worldwide. It is undoubtly one of the most popular video games, with 120 monthly active users. League of Legends or LOL is a game played by 10 players in a single match that can range from 15-40 minutes on average. Each team (blue and red) consists of 5 players, each with a varying role. The objective of the game is to detroy the enemy's Nexus.</p>
+<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p>League of Legends is a game that is played by over 180 million players worldwide. It is undoubtly one of the most popular video games, with 120 monthly active users. League of Legends or LOL is a game played by 10 players in a single match that can range from 15-40 minutes on average. Each team (blue and red) consists of 5 players, each with a varying role. The objective of the game is to detroy the enemy's Nexus.</p>
 <p>Because LOL is such a popular game, the competitive scene has also seen a dramatic rise, with the 2021 Worlds Tournaments seeing peak 74 million concurrent viewers. Many players want to know what will give them a competitive edge in the game, and through this tutorial, we can get a deeper look into what factors contribute to the winning of games, and try to predict game outcomes.</p>
 <p>(Sources: <a href="https://activeplayer.io/league-of-legends/">https://activeplayer.io/league-of-legends/</a>  <a href="https://www.sportsbusinessjournal.com/Esports/Sections/Media/2021/11/Worlds-2021-Finals-AMA.aspx#:~:text=The%20finals%20between%20DWG%20KIA,60.33%25%20increase%20over%202020%2C%20according">https://www.sportsbusinessjournal.com/Esports/Sections/Media/2021/11/Worlds-2021-Finals-AMA.aspx#:~:text=The%20finals%20between%20DWG%20KIA,60.33%25%20increase%20over%202020%2C%20according</a>)</p>
-<p>Gathering the data:</p>
-<p>There are many datasets for LOL available, you can even pull directly from RIOT GAME's official API to gather the data you want. However, the official API has a limit of 100 calls per 2 minutes for normal users. For this reason, we will download a dataset from Kaggles(<a href="https://www.kaggle.com/bobbyscience/league-of-legends-diamond-ranked-games-10-min">https://www.kaggle.com/bobbyscience/league-of-legends-diamond-ranked-games-10-min</a>). This dataset contains approximately 10k games played by Diamond Ranked Players.</p>
+<h2 id="Gathering-the-data:">Gathering the data:<a class="anchor-link" href="#Gathering-the-data:">&#182;</a></h2><p>There are many datasets for LOL available, you can even pull directly from RIOT GAME's official API to gather the data you want. However, the official API has a limit of 100 calls per 2 minutes for normal users. For this reason, we will download a dataset from Kaggles(<a href="https://www.kaggle.com/bobbyscience/league-of-legends-diamond-ranked-games-10-min">https://www.kaggle.com/bobbyscience/league-of-legends-diamond-ranked-games-10-min</a>). This dataset contains approximately 10k games played by Diamond Ranked Players.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14864,37 +14861,37 @@ by Yong Li, William Ju,</p>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>We have data on 9879 games of high daimond players, with each game having a collection of 40 columns</p>
-<p>Description of Columns:</p>
-<p>gameId: Unique RIOT ID of the game. Can be used with the Riot Games API.
-blueWins: The target column. 1 if the blue team has won, 0 otherwise.
-blueWardsPlaced: Number of warding totems placed by the blue team on the map
-blueWardsDestroyed: Number of enemy warding totems the blue team has destroyed
-blueFirstBlood: First kill of the game. 1 if the blue team did the first kill(Extra Gold), 0 otherwise
-blueKills: Number of enemies killed by the blue team
-blueDeaths: Number of deaths (blue team)
-blueAssists: Number of kill assists (blue team)
-blueEliteMonsters: Number of elite monsters killed by the blue team (Dragons and Heralds)
-blueDragons: Number of dragons killed by the blue team
-blueHeralds: Number of heralds killed by the blue team
-blueTowersDestroyed: Number of structures destroyed by the blue team
-blueTotalGold: Blue team total gold
-blueAvgLevel: Blue team average champion level
-blueTotalExperience: Blue team total experience
-blueTotalMinionsKilled: Blue team total minions killed (CS)
-blueTotalJungleMinionsKilled: Blue team total jungle monsters killed
-blueGoldDiff: Blue team gold difference compared to the enemy team
-blueExperienceDiff: Blue team experience difference compared to the enemy team
-blueCSPerMin: Blue team CS (TotalMinionsKilled) per minute
-blueGoldPerMin: Blue team gold per minute
-...</p>
+<h4 id="Description-of-Columns:">Description of Columns:<a class="anchor-link" href="#Description-of-Columns:">&#182;</a></h4><ul>
+<li>gameId: Unique RIOT ID of the game. Can be used with the Riot Games API.</li>
+<li>blueWins: The target column. 1 if the blue team has won, 0 otherwise.</li>
+<li>blueWardsPlaced: Number of warding totems placed by the blue team on the map</li>
+<li>blueWardsDestroyed: Number of enemy warding totems the blue team has destroyed</li>
+<li>blueFirstBlood: First kill of the game. 1 if the blue team did the first kill(Extra Gold), 0 otherwise</li>
+<li>blueKills: Number of enemies killed by the blue team</li>
+<li>blueDeaths: Number of deaths (blue team)</li>
+<li>blueAssists: Number of kill assists (blue team)</li>
+<li>blueEliteMonsters: Number of elite monsters killed by the blue team (Dragons and Heralds)</li>
+<li>blueDragons: Number of dragons killed by the blue team</li>
+<li>blueHeralds: Number of heralds killed by the blue team</li>
+<li>blueTowersDestroyed: Number of structures destroyed by the blue team</li>
+<li>blueTotalGold: Blue team total gold</li>
+<li>blueAvgLevel: Blue team average champion level</li>
+<li>blueTotalExperience: Blue team total experience</li>
+<li>blueTotalMinionsKilled: Blue team total minions killed (CS)</li>
+<li>blueTotalJungleMinionsKilled: Blue team total jungle monsters killed</li>
+<li>blueGoldDiff: Blue team gold difference compared to the enemy team</li>
+<li>blueExperienceDiff: Blue team experience difference compared to the enemy team</li>
+<li>blueCSPerMin: Blue team CS (TotalMinionsKilled) per minute</li>
+<li>blueGoldPerMin: Blue team gold per minute
+...</li>
+</ul>
 <p>The rest are the same variables, except for the red team</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Data Preparation</p>
-<p>For this tutorial, We will see if combining the parameters(red/blue) into one will change the effectiveness of our predictions. We will do this by making a new Variable called redBlueDiff by taking the blue team's variable, and subtracting it from the red team's. The reason why I want to create this new DataFrame is because, instead of the actual gold your team accumulated, often times, it comes down to how well you are doing relative to the enemy team.
+<h2 id="Data-Preparation">Data Preparation<a class="anchor-link" href="#Data-Preparation">&#182;</a></h2><p>For this tutorial, We will see if combining the parameters(red/blue) into one will change the effectiveness of our predictions. We will do this by making a new Variable called redBlueDiff by taking the blue team's variable, and subtracting it from the red team's. The reason why I want to create this new DataFrame is because, instead of the actual gold your team accumulated, often times, it comes down to how well you are doing relative to the enemy team.
 We will also run the predictor on the original data. For both of the dataframes, we will get rid of gameId, as that is not necessary to make a prediction.</p>
 
 </div>
@@ -15259,8 +15256,7 @@ We will also run the predictor on the original data. For both of the dataframes,
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Data Exploration</p>
-<p>Lets go ahead and visualize the data to try and identify any obvious trends or patterns that we cant see by just looking at the raw data. Starting with a simple bar graph.</p>
+<h2 id="Data-Exploration">Data Exploration<a class="anchor-link" href="#Data-Exploration">&#182;</a></h2><p>Lets go ahead and visualize the data to try and identify any obvious trends or patterns that we cant see by just looking at the raw data. Starting with a simple bar graph.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15453,11 +15449,9 @@ We will also run the predictor on the original data. For both of the dataframes,
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Prediction:</p>
-<p>This is me explaining my stuff, edit out later and explain better:
+<h2 id="Prediction">Prediction<a class="anchor-link" href="#Prediction">&#182;</a></h2><p>This is me explaining my stuff, edit out later and explain better:
 Idea here is to train a model to predict outcome of games. In this case, we can choose several different types of models such as Neural Net, Decision Tree, Logistic Regression, and many more. I ultimately decided for kNN binary classifier because of its simplicity, and the fact that we have 40 parameters. Another options that I considered was Neural Nets, however, it requires a lot of fine funing such as types and number of layers, number of nodes per layer, and activation times. I believe that ultimately NN's will be more accurate, but will take a lot more time in terms of training and fitting the model to our dataset.</p>
-<p>After running tests: knn is generally 68-72 accuracy, Neural net is high variance with 49-70. Decided with kNN
-diffData always has edge of around 1-3 percent</p>
+<p>After running tests: knn is generally 68-72 accuracy, Neural net is high variance with 49-70. Decided with kNN</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15472,7 +15466,7 @@ diffData always has edge of around 1-3 percent</p>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
 
-<span class="n">neigh_og</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">neigh_og</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">17</span><span class="p">)</span>
 
 <span class="n">originalArr</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;blueWardsPlaced&quot;</span><span class="p">,</span><span class="s2">&quot;redWardsPlaced&quot;</span><span class="p">,</span><span class="s2">&quot;blueWardsDestroyed&quot;</span><span class="p">,</span><span class="s2">&quot;redWardsDestroyed&quot;</span><span class="p">,</span><span class="s2">&quot;blueFirstBlood&quot;</span><span class="p">,</span><span class="s2">&quot;redFirstBlood&quot;</span><span class="p">,</span><span class="s2">&quot;blueKills&quot;</span><span class="p">,</span><span class="s2">&quot;redKills&quot;</span><span class="p">,</span><span class="s2">&quot;blueDeaths&quot;</span><span class="p">,</span><span class="s2">&quot;redDeaths&quot;</span><span class="p">,</span><span class="s2">&quot;blueAssists&quot;</span><span class="p">,</span><span class="s2">&quot;redAssists&quot;</span><span class="p">,</span><span class="s2">&quot;blueEliteMonsters&quot;</span><span class="p">,</span><span class="s2">&quot;redEliteMonsters&quot;</span><span class="p">,</span><span class="s2">&quot;blueDragons&quot;</span><span class="p">,</span><span class="s2">&quot;redDragons&quot;</span><span class="p">,</span><span class="s2">&quot;blueHeralds&quot;</span><span class="p">,</span><span class="s2">&quot;redHeralds&quot;</span><span class="p">,</span><span class="s2">&quot;blueTowersDestroyed&quot;</span><span class="p">,</span>
 <span class="s2">&quot;redTowersDestroyed&quot;</span><span class="p">,</span><span class="s2">&quot;blueTotalGold&quot;</span><span class="p">,</span><span class="s2">&quot;redTotalGold&quot;</span><span class="p">,</span><span class="s2">&quot;blueTotalExperience&quot;</span><span class="p">,</span><span class="s2">&quot;redTotalExperience&quot;</span><span class="p">,</span><span class="s2">&quot;blueAvgLevel&quot;</span><span class="p">,</span><span class="s2">&quot;redAvgLevel&quot;</span><span class="p">,</span><span class="s2">&quot;blueTotalMinionsKilled&quot;</span><span class="p">,</span><span class="s2">&quot;redTotalMinionsKilled&quot;</span><span class="p">,</span><span class="s2">&quot;blueTotalJungleMinionsKilled&quot;</span><span class="p">,</span><span class="s2">&quot;redTotalJungleMinionsKilled&quot;</span><span class="p">,</span><span class="s2">&quot;blueGoldDiff&quot;</span><span class="p">,</span><span class="s2">&quot;blueExperienceDiff&quot;</span><span class="p">,</span><span class="s2">&quot;blueCSPerMin&quot;</span><span class="p">,</span>
@@ -15492,7 +15486,7 @@ diffData always has edge of around 1-3 percent</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_og_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
 
 <span class="c1">#####################################</span>
-<span class="n">neigh_diff</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">neigh_diff</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
 
 <span class="n">x_diff</span><span class="p">,</span> <span class="n">y_diff</span> <span class="o">=</span> <span class="n">diffData</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="n">diffArr</span><span class="p">],</span> <span class="n">diffData</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;blueWins&quot;</span><span class="p">]</span>
 
@@ -15525,30 +15519,18 @@ diffData always has edge of around 1-3 percent</p>
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>0.7072874493927126
+<pre>0.5619433198380567
               precision    recall  f1-score   support
 
-           0       0.69      0.76      0.72      1236
-           1       0.73      0.65      0.69      1234
+           0       0.95      0.13      0.23      1236
+           1       0.53      0.99      0.69      1234
 
-    accuracy                           0.71      2470
-   macro avg       0.71      0.71      0.71      2470
-weighted avg       0.71      0.71      0.71      2470
+    accuracy                           0.56      2470
+   macro avg       0.74      0.56      0.46      2470
+weighted avg       0.74      0.56      0.46      2470
 
-[[941 295]
- [428 806]]
-0.7137651821862349
-              precision    recall  f1-score   support
-
-           0       0.70      0.75      0.73      1236
-           1       0.73      0.67      0.70      1234
-
-    accuracy                           0.71      2470
-   macro avg       0.72      0.71      0.71      2470
-weighted avg       0.72      0.71      0.71      2470
-
-[[933 303]
- [404 830]]
+[[ 162 1074]
+ [   8 1226]]
 </pre>
 </div>
 </div>
