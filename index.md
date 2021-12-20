@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## CMSC320 Fall 2021 Final Tutorial (Yong Li, Lawrence Jung, William Ju)
 
 You can use the [editor on GitHub](https://github.com/liyong2123/cmsc320project/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
