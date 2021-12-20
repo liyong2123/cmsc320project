@@ -15390,6 +15390,12 @@ We will also run the predictor on the original data. For both of the dataframes,
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>By looping through the table, it was very simple to collect the win frequency of teams based on groupings of diffGold and diffExperience. By turning this data into bar graphs, it was clear yet again that diffTotalGold and diffTotalExperience are strong predictors for game performance.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Predictor:">Predictor:<a class="anchor-link" href="#Predictor:">&#182;</a></h2><p>This is me explaining my stuff, edit out later and explain better:
 Idea here is to train a model to predict outcome of games. In this case, we can choose several different types of models such as Neural Net, Decision Tree, Logistic Regression, and many more. I ultimately decided for kNN binary classifier because of its simplicity, and the fact that we have 40 parameters. Another options that I considered was Neural Nets, however, it requires a lot of fine funing such as types and number of layers, number of nodes per layer, and activation times. I believe that ultimately NN's will be more accurate, but will take a lot more time in terms of training and fitting the model to our dataset.</p>
 <p>After running tests: knn is generally 68-72 accuracy, Neural net is high variance with 49-70. Decided with kNN</p>
